@@ -1,14 +1,9 @@
 import { View, Text, StyleSheet } from "react-native"
 
-function Board(i){
-    return <Text>{i}</Text>
-}
-
-
 export default ({i,numbers}) =>{
     return(
         <View style={style.row}>
-            {Board(i)}
+            {<Text>{i}</Text>}
             {numbers.map((number)=>{
                 return <Text>{number}</Text>
             })}
