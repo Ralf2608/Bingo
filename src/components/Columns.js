@@ -4,12 +4,12 @@ export default ({i,numbers}) =>{
     
     return(
         <View style={style.row}>
-            {<Text>{i}</Text>}
+            {<Text style={style.text}>{i}</Text>}
             {numbers.map((number, index)=>{
                 if(i === 'N' && index === 2){
-                    return <Text key={number}></Text>
+                    return <Text key={number} style={style.text}></Text>
                 }
-                return <Text key ={number}>{number}</Text>
+                return <Text key ={number} style={style.text}>{number}</Text>
             })}
         </View>
 )}
@@ -17,7 +17,10 @@ export default ({i,numbers}) =>{
 const style= StyleSheet.create({
     row: {
         padding: 20,
-        gap: 5,
+        gap: 8,
         alignContent: "center"
+    },
+    text: {
+        fontSize: 22
     }
 })
