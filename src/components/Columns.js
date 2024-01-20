@@ -7,9 +7,9 @@ export default ({i,numbers}) =>{
             {<Text>{i}</Text>}
             {numbers.map((number, index)=>{
                 if(i === 'N' && index === 2){
-                    return <Text></Text>
+                    return <Text key={number}></Text>
                 }
-                return <Text>{number}</Text>
+                return <Text key ={number}>{number}</Text>
             })}
         </View>
 )}
